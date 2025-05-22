@@ -8,6 +8,9 @@ int main() {
   float C1Area;
   float C1PIB;
   int   C1PontosTur;
+  float C1DensidadePop;
+  float C1PIBPerCapita;
+
   char  C2Estado;
   char  C2Codigo[4];
   char  C2Cidade[20];
@@ -15,6 +18,8 @@ int main() {
   float C2Area;
   float C2PIB;
   int   C2PontosTur;  
+  float C2DensidadePop;
+  float C2PIBPerCapita;  
 
   printf("Informe os dados da carta 1:\n");
 
@@ -38,6 +43,9 @@ int main() {
   
   printf("Pontos Turísticos: ");
   scanf("%d", &C1PontosTur);    
+
+  C1DensidadePop = (float) C1Populacao / C1Area;
+  C1PIBPerCapita = (float) C1PIB / C1Area;
 
   printf(" \n");
   printf("Informe os dados da carta 2:\n");
@@ -63,15 +71,20 @@ int main() {
   printf("Pontos Turísticos: ");
   scanf("%d", &C2PontosTur);   
 
+  C2DensidadePop = (float) C2Populacao / C2Area;
+  C2PIBPerCapita = (float) C2PIB / C2Area;  
+
   printf(" \n");
   printf("Carta 1:\n");
   printf("Estado: %c \n", C1Estado);
   printf("Código: %s \n", C1Codigo);
   printf("Cidade: %s \n", C1Cidade);
   printf("População: %d \n", C1Populacao);
-  printf("Área: %f \n", C1Area);
-  printf("PIB: %f \n", C1PIB);
+  printf("Área: %.2f \n", C1Area);
+  printf("PIB: %.2f \n", C1PIB);
   printf("Pontos Turísticos: %d \n", C1PontosTur);
+  printf("Densidade Populacional: %.2f \n", C1DensidadePop);
+  printf("PIB Per Capita: %.2f \n", C1PIBPerCapita);
 
   printf(" \n");
   printf("Carta 2:\n");
@@ -79,9 +92,11 @@ int main() {
   printf("Código: %s \n", C2Codigo);
   printf("Cidade: %s \n", C2Cidade);
   printf("População: %d \n", C2Populacao);
-  printf("Área: %f \n", C2Area);
-  printf("PIB: %f \n", C2PIB);
+  printf("Área: %.2f \n", C2Area);
+  printf("PIB: %.2f \n", C2PIB);
   printf("Pontos Turísticos: %d \n", C2PontosTur);  
+  printf("Densidade Populacional: %.2f \n", C2DensidadePop);
+  printf("PIB Per Capita: %.2f \n", C2PIBPerCapita);  
 
   return 0;
 }
